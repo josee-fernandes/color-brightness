@@ -28,3 +28,7 @@ const myColor = '#ff0000'
 colorElement.style.backgroundColor = colorBrightness(myColor)
 lighterColorElement.style.backgroundColor = colorBrightness(myColor, 50)
 darkerColorElement.style.backgroundColor = colorBrightness(myColor, -50)
+
+colorElement.innerHTML = colorBrightness(myColor)
+lighterColorElement.innerHTML = colorBrightness(myColor, 50)
+darkerColorElement.innerHTML = colorBrightness(myColor, -50)
