@@ -19,10 +19,50 @@ body{
    width: 100%;
    height: 100%;
    place-items: center;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(6, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+}
+
+.color-value{
+   grid-column: 2 / 4;
+   min-height: 50px;
+   padding: 10px;
+   border-radius: 8px;
+   border: none;
+   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .2);
+   text-align: center;
+   max-width: 300px;
+   width: 80%;
+   font-size: 1.2rem;
+}
+
+.color-value:focus{
+   outline: none;
+}
+
+.change-color{
+   grid-column: 4 / 6;
+   min-height: 50px;
+   max-width: 300px;
+   width: 80%;
+   border: none;
+   border-radius: 8px;
+   background: linear-gradient(0, rgb(35, 126, 74), rgb(44, 175, 103));
+   color: white;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: .1rem;
+   cursor: pointer;
+   transition: filter .2s ease;
+   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .2);
+}
+
+.change-color:hover{
+   filter: brightness(1.2);
 }
 
 .color, .lighter-color, .darker-color{
+   grid-row: 2 / 3;
    max-width: 200px;
    max-height: 200px;
    width: 80%;
@@ -33,4 +73,18 @@ body{
    place-items: center;
    color: white;
    mix-blend-mode: difference;
+   font-size: 1.2rem;
+   font-weight: 700;
+}
+
+.color{
+   grid-column: 1 / 3;
+}
+
+.lighter-color{
+   grid-column:  3 / 5;
+}
+
+.darker-color{
+   grid-column: 5 / 7;
 }
