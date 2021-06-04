@@ -23,7 +23,24 @@ const colorElement = document.querySelector('.color')
 const lighterColorElement = document.querySelector('.lighter-color')
 const darkerColorElement = document.querySelector('.darker-color')
 
-const myColor = '#ff0000'
+const changeColorButton = document.querySelector('.change-color')
+
+changeColorButton.addEventListener('click', () => {
+   const colorValue = document.querySelector('.color-value').value
+
+   const myColor = colorValue
+
+   colorElement.style.backgroundColor = colorBrightness(myColor)
+   lighterColorElement.style.backgroundColor = colorBrightness(myColor, 50)
+   darkerColorElement.style.backgroundColor = colorBrightness(myColor, -50)
+
+   colorElement.innerHTML = colorBrightness(myColor)
+   lighterColorElement.innerHTML = colorBrightness(myColor, 50)
+   darkerColorElement.innerHTML = colorBrightness(myColor, -50)
+
+})
+
+const myColor = '#7834c7'
 
 colorElement.style.backgroundColor = colorBrightness(myColor)
 lighterColorElement.style.backgroundColor = colorBrightness(myColor, 50)
